@@ -6,7 +6,6 @@ import java.util.Locale;
 import java.util.stream.Collectors;
 
 import entities.Product;
-import util.ProductFunction;
 
 public class Program {
 
@@ -22,7 +21,7 @@ public class Program {
 		
 		list.forEach(System.out::println);
 		
-		List<String> upNames = list.stream().map(Product::staticUpperCaseName).collect(Collectors.toList());
+		List<String> upNames = list.stream().map(Product::nonStaticUpperCaseName).collect(Collectors.toList());
 		
 		System.out.println();
 		upNames.forEach(System.out::println);
