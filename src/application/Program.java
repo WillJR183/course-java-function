@@ -22,7 +22,7 @@ public class Program {
 		
 		list.forEach(System.out::println);
 		
-		List<String> upNames = list.stream().map(new ProductFunction()).collect(Collectors.toList());
+		List<String> upNames = list.stream().map(Product::staticUpperCaseName).collect(Collectors.toList());
 		
 		System.out.println();
 		upNames.forEach(System.out::println);
