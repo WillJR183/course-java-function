@@ -3,7 +3,6 @@ package application;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import entities.Product;
@@ -22,9 +21,7 @@ public class Program {
 		
 		list.forEach(System.out::println);
 		
-		Function<Product, String> function = x -> x.getName().toUpperCase();
-
-		List<String> upNames = list.stream().map(function).collect(Collectors.toList());
+		List<String> upNames = list.stream().map(x -> x.getName().toUpperCase()).collect(Collectors.toList());
 		
 		System.out.println();
 		upNames.forEach(System.out::println);
